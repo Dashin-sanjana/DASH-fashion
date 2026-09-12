@@ -32,6 +32,10 @@ body {
     sans-serif;
 }
 
+body.has-lightbox {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
 }
@@ -1182,11 +1186,40 @@ h3 {
   }
 
   .runway-stack,
-  .gallery,
   .visit-grid,
   .style-strip ol,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .collection {
+    overflow: hidden;
+  }
+
+  .gallery {
+    grid-auto-columns: minmax(250px, 78vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    gap: 1rem;
+    margin-inline: -0.25rem;
+    padding: 0.25rem 0.25rem 1.15rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-padding-inline: 0.25rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  .gallery::-webkit-scrollbar-track {
+    background: rgba(8, 8, 8, 0.08);
+  }
+
+  .gallery::-webkit-scrollbar-thumb {
+    background: var(--ink);
   }
 
   .section-heading {
@@ -1199,9 +1232,15 @@ h3 {
   }
 
   .look,
-  .look:nth-child(n),
+  .look:nth-child(n) {
+    width: 100%;
+    height: min(460px, 118vw);
+    min-height: 0;
+    scroll-snap-align: start;
+  }
+
   .look img {
-    min-height: 360px;
+    min-height: 0;
   }
 
   .footer-brand,

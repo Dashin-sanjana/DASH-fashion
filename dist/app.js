@@ -4,6 +4,18 @@ const lightboxTitle = lightbox?.querySelector(".lightbox-caption strong");
 const lightboxMeta = lightbox?.querySelector(".lightbox-caption span");
 const closeButton = lightbox?.querySelector(".close-lightbox");
 
+const closeLightbox = () => {
+  if (!lightbox) return;
+
+  if (typeof lightbox.close === "function" && lightbox.open) {
+    lightbox.close();
+  } else {
+    lightbox.removeAttribute("open");
+  }
+
+  document.body.classList.remove("has-lightbox");
+};
+
 document.querySelectorAll(".look").forEach((button) => {
   button.addEventListener("pointermove", (event) => {
     const bounds = button.getBoundingClientRect();
@@ -23,20 +35,28 @@ document.querySelectorAll(".look").forEach((button) => {
     lightboxTitle.textContent = title;
     lightboxMeta.textContent = meta;
 
-    if (typeof lightbox.showModal === "function") {
+    if (typeof lightbox.showModal === "function" && !lightbox.open) {
       lightbox.showModal();
+    } else {
+      lightbox.setAttribute("open", "");
     }
+
+    document.body.classList.add("has-lightbox");
   });
 });
 
 closeButton?.addEventListener("click", () => {
-  lightbox?.close();
+  closeLightbox();
 });
 
 lightbox?.addEventListener("click", (event) => {
   if (event.target === lightbox) {
-    lightbox.close();
+    closeLightbox();
   }
+});
+
+lightbox?.addEventListener("cancel", () => {
+  document.body.classList.remove("has-lightbox");
 });
 
 const revealItems = document.querySelectorAll(".reveal");

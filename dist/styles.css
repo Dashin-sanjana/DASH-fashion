@@ -693,6 +693,13 @@ h3 {
   isolation: isolate;
 }
 
+.collection .look {
+  background:
+    linear-gradient(135deg, rgba(240, 184, 62, 0.28), transparent 36%),
+    linear-gradient(315deg, rgba(158, 199, 217, 0.35), transparent 42%),
+    #151515;
+}
+
 .look:nth-child(1),
 .look:nth-child(6) {
   grid-column: span 5;
@@ -721,6 +728,12 @@ h3 {
   transition: transform 340ms ease, filter 340ms ease;
 }
 
+.collection .look img {
+  padding: clamp(0.55rem, 1.4vw, 1rem);
+  object-fit: contain;
+  filter: saturate(1.04) contrast(1.02);
+}
+
 .look::after {
   position: absolute;
   inset: 0;
@@ -730,6 +743,13 @@ h3 {
     linear-gradient(0deg, rgba(0, 0, 0, 0.62), transparent 45%);
   opacity: 0.92;
   transition: opacity 220ms ease;
+}
+
+.collection .look::after {
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.14), transparent 0 7rem),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent 34%);
+  opacity: 0.82;
 }
 
 .look::before {
@@ -761,6 +781,12 @@ h3 {
 .look:focus-visible img {
   filter: saturate(1.08);
   transform: scale(1.04);
+}
+
+.collection .look:hover img,
+.collection .look:focus-visible img {
+  filter: saturate(1.08) contrast(1.04);
+  transform: scale(1.025);
 }
 
 .look:hover::after,
@@ -1059,7 +1085,7 @@ h3 {
 }
 
 .lightbox {
-  width: min(92vw, 760px);
+  width: min(94vw, 980px);
   padding: 0;
   color: var(--white);
   background: var(--ink);
@@ -1073,7 +1099,7 @@ h3 {
 
 .lightbox img {
   width: 100%;
-  max-height: 76vh;
+  max-height: 82vh;
   object-fit: contain;
   background: #111;
 }

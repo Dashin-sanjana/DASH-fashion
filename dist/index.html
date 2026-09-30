@@ -13,9 +13,13 @@
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060606'/%3E%3Ctext x='32' y='39' font-family='Arial Black,Arial,sans-serif' font-size='18' text-anchor='middle' fill='%23fff'%3EDASH%3C/text%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
+    <div class="announcement-bar">
+      <span>Delivery available across Sri Lanka</span>
+      <a href="https://wa.me/94763568325" target="_blank" rel="noreferrer">Check size &amp; availability</a>
+    </div>
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="Dash Fashion home">
         <img src="assets/logo.webp" alt="" />
@@ -25,6 +29,7 @@
         <a href="#collection">Collection</a>
         <a href="#visit">Visit</a>
         <a href="#contact">Contact</a>
+        <a class="nav-shop" href="#collection">Shop now</a>
       </nav>
     </header>
 
@@ -39,24 +44,29 @@
           <strong>2026</strong>
         </div>
         <div class="hero-content">
-          <p class="eyebrow">Colombo / Ambalangoda / Delivery</p>
-          <h1 id="hero-title"><span>Dash</span> Fashion edit.</h1>
+          <p class="eyebrow">New arrivals / Colombo / Ambalangoda</p>
+          <h1 id="hero-title"><span>Frocks</span> for every plan.</h1>
           <p class="hero-copy">
-            Frocks with attitude, soft day dresses, and occasion looks selected for the moment before the photo.
+            Easy day dresses, bold prints, and occasion-ready styles. Pick a look and message us for sizes, availability, and delivery.
           </p>
           <div class="hero-actions" aria-label="Contact actions">
             <a class="button primary" href="https://wa.me/94763568325" target="_blank" rel="noreferrer">WhatsApp</a>
-            <a class="button secondary" href="#collection">View styles</a>
+            <a class="button secondary" href="#collection">Shop collection</a>
+          </div>
+          <div class="hero-trust" aria-label="Shopping information">
+            <span>Size checks on WhatsApp</span>
+            <span>Delivery available</span>
+            <span>In-store shopping</span>
           </div>
         </div>
         <div class="runway-stack" aria-label="Featured Dash Fashion styles">
-          <button class="hero-look look" type="button" data-image="assets/frock-2.webp" data-title="Everyday floral style" data-meta="Soft, photo-ready, and easy to wear.">
-            <img src="assets/frock-2.webp" alt="Everyday floral style from Dash Fashion" />
-            <span>Everyday floral</span>
+          <button class="hero-look look" type="button" data-code="DF-02" data-image="assets/frock-2.webp" data-title="Pink check day dress" data-meta="Square neckline, fitted waist, and a softly gathered skirt.">
+            <img src="assets/frock-2.webp" alt="Pink check day dress from Dash Fashion" />
+            <span>Pink check day dress</span>
           </button>
-          <button class="hero-look look" type="button" data-image="assets/frock-4.webp" data-title="Weekend favorite" data-meta="Made for brunch plans, visits, and relaxed evenings.">
-            <img src="assets/frock-4.webp" alt="Weekend favorite frock from Dash Fashion" />
-            <span>Weekend favorite</span>
+          <button class="hero-look look" type="button" data-code="DF-01" data-image="assets/frock-4.webp" data-title="Monochrome floral dress" data-meta="A graphic black-and-white floral print for easy statement dressing.">
+            <img src="assets/frock-4.webp" alt="Monochrome floral dress from Dash Fashion" />
+            <span>Monochrome floral</span>
           </button>
         </div>
         <aside class="quick-card glass-ticket" aria-label="Business details">
@@ -131,34 +141,34 @@
         <div class="section-heading">
           <div>
             <span class="section-kicker">Collection</span>
-            <h2 id="collection-title">The lookbook rail</h2>
+            <h2 id="collection-title">Shop the latest frocks</h2>
           </div>
-          <p>Tap a style for a closer look.</p>
+          <p>Select a photo to view details and ask about the style on WhatsApp.</p>
         </div>
         <div class="gallery" aria-label="Dash Fashion product gallery">
-          <button class="look" type="button" data-image="assets/frock-1.webp" data-title="Soft party frock" data-meta="A clean party look with a gentle floral mood.">
-            <img src="assets/frock-1.webp" alt="Soft party frock from Dash Fashion" />
-            <span>Soft party frock</span>
+          <button class="look" type="button" data-code="DF-01" data-image="assets/frock-1.webp" data-title="Monochrome floral dress" data-meta="Graphic floral print with a clean sleeveless silhouette.">
+            <img src="assets/frock-1.webp" alt="Monochrome floral dress detail from Dash Fashion" />
+            <span class="look-info"><strong>Monochrome floral</strong><small>DF-01 · View details</small></span>
           </button>
-          <button class="look" type="button" data-image="assets/frock-2.webp" data-title="Everyday floral style" data-meta="A fresh everyday print for relaxed styling.">
-            <img src="assets/frock-2.webp" alt="Everyday floral frock from Dash Fashion" />
-            <span>Everyday floral style</span>
+          <button class="look" type="button" data-code="DF-02" data-image="assets/frock-2.webp" data-title="Pink check day dress" data-meta="Square neckline, fitted waist, and a softly gathered skirt.">
+            <img src="assets/frock-2.webp" alt="Pink check day dress from Dash Fashion" />
+            <span class="look-info"><strong>Pink check day dress</strong><small>DF-02 · View details</small></span>
           </button>
-          <button class="look" type="button" data-image="assets/frock-3.webp" data-title="Occasion-ready dress" data-meta="Dress it up for evenings, birthdays, and family events.">
-            <img src="assets/frock-3.webp" alt="Occasion-ready dress from Dash Fashion" />
-            <span>Occasion-ready dress</span>
+          <button class="look" type="button" data-code="DF-02" data-image="assets/frock-3.webp" data-title="Pink check day dress" data-meta="A closer look at the structured bodice and gathered waist.">
+            <img src="assets/frock-3.webp" alt="Pink check day dress bodice detail from Dash Fashion" />
+            <span class="look-info"><strong>Pink check detail</strong><small>DF-02 · View details</small></span>
           </button>
-          <button class="look" type="button" data-image="assets/frock-4.webp" data-title="Weekend favorite" data-meta="Light, simple, and made for moving through the day.">
-            <img src="assets/frock-4.webp" alt="Weekend favorite frock from Dash Fashion" />
-            <span>Weekend favorite</span>
+          <button class="look" type="button" data-code="DF-01" data-image="assets/frock-4.webp" data-title="Monochrome floral dress" data-meta="An alternate view of the bold black-and-white floral print.">
+            <img src="assets/frock-4.webp" alt="Monochrome floral dress alternate view from Dash Fashion" />
+            <span class="look-info"><strong>Monochrome floral</strong><small>DF-01 · Alternate view</small></span>
           </button>
-          <button class="look" type="button" data-image="assets/frock-5.webp" data-title="Fresh arrival" data-meta="A new-in style to ask about before it goes.">
-            <img src="assets/frock-5.webp" alt="Fresh arrival frock from Dash Fashion" />
-            <span>Fresh arrival</span>
+          <button class="look" type="button" data-code="DF-03" data-image="assets/frock-5.webp" data-title="Midnight occasion dress" data-meta="A dark statement dress with patterned detailing for evening plans.">
+            <img src="assets/frock-5.webp" alt="Midnight occasion dress from Dash Fashion" />
+            <span class="look-info"><strong>Midnight occasion dress</strong><small>DF-03 · View details</small></span>
           </button>
-          <button class="look" type="button" data-image="assets/frock-6.webp" data-title="Easy day dress" data-meta="A soft everyday dress for simple, pretty plans.">
-            <img src="assets/frock-6.webp" alt="Easy day dress from Dash Fashion" />
-            <span>Easy day dress</span>
+          <button class="look" type="button" data-code="DF-01" data-image="assets/frock-6.webp" data-title="Monochrome floral dress" data-meta="A full flat-lay view to help you inspect the shape and print.">
+            <img src="assets/frock-6.webp" alt="Monochrome floral dress full view from Dash Fashion" />
+            <span class="look-info"><strong>Monochrome floral</strong><small>DF-01 · Full view</small></span>
           </button>
         </div>
       </section>
@@ -250,9 +260,15 @@
       <div class="lightbox-caption">
         <strong></strong>
         <span></span>
+        <div class="lightbox-actions">
+          <a class="lightbox-whatsapp" href="https://wa.me/94763568325" target="_blank" rel="noreferrer">Ask on WhatsApp</a>
+          <a class="lightbox-call" href="tel:+94763568325">Call 076 356 8325</a>
+        </div>
       </div>
     </dialog>
 
-    <script src="app.js"></script>
+    <a class="mobile-whatsapp" href="https://wa.me/94763568325" target="_blank" rel="noreferrer">Ask on WhatsApp</a>
+
+    <script src="app.js?v=2"></script>
   </body>
 </html>

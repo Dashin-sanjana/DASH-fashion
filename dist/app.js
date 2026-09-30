@@ -2,6 +2,7 @@ const lightbox = document.querySelector(".lightbox");
 const lightboxImage = lightbox?.querySelector("img");
 const lightboxTitle = lightbox?.querySelector(".lightbox-caption strong");
 const lightboxMeta = lightbox?.querySelector(".lightbox-caption span");
+const lightboxWhatsApp = lightbox?.querySelector(".lightbox-whatsapp");
 const closeButton = lightbox?.querySelector(".close-lightbox");
 
 const closeLightbox = () => {
@@ -29,11 +30,17 @@ document.querySelectorAll(".look").forEach((button) => {
     const image = button.getAttribute("data-image");
     const title = button.getAttribute("data-title") || "Dash Fashion style";
     const meta = button.getAttribute("data-meta") || "Message Dash Fashion to ask about size and availability.";
+    const code = button.getAttribute("data-code") || "";
 
     lightboxImage.src = image || "";
     lightboxImage.alt = title;
     lightboxTitle.textContent = title;
     lightboxMeta.textContent = meta;
+    if (lightboxWhatsApp) {
+      const product = code ? `${title} (${code})` : title;
+      const message = `Hi Dash Fashion, I'd like to check the available sizes and price for ${product}.`;
+      lightboxWhatsApp.href = `https://wa.me/94763568325?text=${encodeURIComponent(message)}`;
+    }
 
     if (typeof lightbox.showModal === "function" && !lightbox.open) {
       lightbox.showModal();
